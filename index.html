@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-left">
+            <li>
+                <a href="index.html" alt="home">HOME</a>
+            </li>
+            <li>
+                <a href="favorites.html" alt="favorites-page">FAVORITES</a>
+            </li>
+            <li>
+                <a href="details.html" alt="biography" >BIOGRAPHY</a>
+            </li>
+        </ul>
+        <ul class="navbar-right">
+            <li>
+                <a href="signup.html" alt="signup-page">SIGN UP</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="pagination">
+        <button class="previous-button" disabled>Prev</button>
+        <button class="next-button">Next</button>
+    </div>
+    <div class="movie-list" id="movie-list"></div>
+    <script src="./js/api.js"></script>
+</body>
+</html>
