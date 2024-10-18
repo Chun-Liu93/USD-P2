@@ -15,9 +15,6 @@
             <li>
                 <a href="favorites.html" alt="favorites-page">FAVORITES</a>
             </li>
-            <li>
-                <a href="details.html" alt="biography" >BIOGRAPHY</a>
-            </li>
         </ul>
         <ul class="navbar-right">
             <li>
@@ -29,7 +26,25 @@
         <button class="previous-button" disabled>Prev</button>
         <button class="next-button">Next</button>
     </div>
-    <div class="movie-list" id="movie-list"></div>
+    <div
+        class="movie-list" id="movie-list">
+    </div>
+    <!-- Modal -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="modal-body">
+                <img id="modal-poster" src="" alt="Movie Poster">
+                <div id="modal-description-container">
+                    <p id="modal-description"></p>
+                    <p id="modal-genre_ids"></p>
+                    <p id="modal-vote_average"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="./js/api.js"></script>
 </body>
 </html>

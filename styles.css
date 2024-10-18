@@ -75,3 +75,244 @@
     margin-top: 10px;
     color: black;
 }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+    justify-content: center; /* Horizontally center the modal */
+    align-items: center; /* Vertically center the modal */
+    display: flex; /* Use flexbox to center the modal in the viewport */
+}
+
+/* Modal Content Layout */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Set to 90% of the screen width */
+    max-width: 1200px; /* Optional: Set a maximum width */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0); /* Adds a shadow for a nice effect */
+    display: flex; /* Use Flexbox to layout the modal content */
+    flex-direction: column; /* Stack title vertically at the top */
+    position: relative; /* Ensure the close button is positioned relative to the modal content */
+}
+
+/* Movie Title Styling */
+#modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between title and content */
+}
+
+/* Horizontal Layout for Movie Poster and Description */
+.modal-body {
+    display: flex;
+    flex-direction: row; /* Make the poster and description side by side */
+    justify-content: space-between; /* Spread out the content */
+    align-items: flex-start; /* Vertically align content */
+    width: 100%;
+}
+
+/* Movie Poster Styling */
+#modal-poster {
+    max-width: 40%; /* Adjust width for poster to fit next to description */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+/* Movie Description Container */
+#modal-description-container {
+    max-width: 55%; /* Adjust the width for the description container */
+    padding-left: 20px; /* Add some padding between the poster and description */
+}
+
+/* Movie Description Text */
+#modal-description {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5; /* Make the description text easier to read */
+    text-align: left; /* Align the description to the left */
+    margin: 10px;
+}
+
+.generate-action {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-adventure {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-animation {
+    background-color: purple;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-comedy {
+    background-color: rgb(172, 91, 20);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-crime {
+    background-color: rgb(147, 13, 13);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.default-documentary {
+    background-color: rgb(101, 101, 101);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-drama {
+    background-color: rgb(40, 171, 23);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-family {
+    background-color: rgb(57, 237, 120);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-fantasy {
+    background-color: rgb(0, 221, 255);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-history {
+    background-color: rgb(34, 108, 155);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-horror {
+    background-color: rgb(4, 4, 4);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-music {
+    background-color: rgb(238, 0, 255);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-mystery {
+    background-color: rgb(96, 62, 1);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-romance {
+    background-color: rgb(242, 124, 209);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-scifi {
+    background-color: rgb(35, 88, 62);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-tv-movie {
+    background-color: rgb(186, 195, 146);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-thriller {
+    background-color: rgb(88, 16, 169);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-war {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.generate-western {
+    background-color: rgb(0, 47, 255);
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+#modal-vote_average {
+    margin: 20px;
+}
+
+/* Close Button */
+.close-button {
+    color: #aaa;
+    position: absolute; /* Position it relative to the modal */
+    top: 10px;  /* Position 10px from the top */
+    right: 20px; /* Position 20px from the right */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none;
+}
