@@ -6,6 +6,7 @@ const GENRES_URL = "https://api.themoviedb.org/3/genre/movie/list";
 let currentPage = 1;
 let totalPages = 46536;
 let genresMap = {};
+let bookmarkedMovies = JSON.parse(localStorage.getItem('bookmarkedMovies')) || [];
 
 //genre colors
 const genreColors = {
@@ -13,6 +14,7 @@ const genreColors = {
     'Adventure': 'generate-adventure',
     'Animation': 'generate-animation',
     'Comedy': 'generate-comedy',
+    'Crime': 'generate-crime',
     'Documentary': 'generate-documentary',
     'Drama': 'generate-drama',
     'Family': 'generate-family',
@@ -100,6 +102,7 @@ function openMovieModal(movie) {
 
     const genres = movie.genre_ids.map(id => genresMap[id] || id);
     modalGenre.innerHTML = '';  // Clear previous content
+    
 
     genres.forEach(genre => {
         const genreSpan = document.createElement('span');
@@ -111,7 +114,13 @@ function openMovieModal(movie) {
 
     modalRating.textContent = `Rating: ${movie.vote_average}`; // Set rating in modal
     modal.style.display = 'flex';
-    
+
+
+    const bookmarkedButton = document.querySelector('.bookmark-button');
+    bookmarkedButton.onclick = function() {
+        addToBookmarkedMovies(movie);
+    }
+
     document.querySelector('.close-button').onclick = function() {
         modal.style.display = 'none';
     };
@@ -129,6 +138,17 @@ function updatePaginationButtons() {
 
     prevButton.disabled = currentPage === 1;
     nextButton.disabled = currentPage === totalPages;
+}
+
+function addToBookmarkedMovies(movie) {
+    const isBookmarked = bookmarkedMovies.some(m => m.id === movie.id);
+    if (!isBookmarked) {
+        addToBookmarkedMovies.push(movie);
+        localStorage.setItem('bookmarkedMovies', JSON.stringify(addToBookmarkedMovies));
+        alert(`${movie.title} has been bookmarked!`);
+    } else {
+        alert(`${movie.title} is already in your favorites.`);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -158,6 +178,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
+
+
 
 
 

@@ -141,7 +141,7 @@
     font-size: 16px;
     line-height: 1.5; /* Make the description text easier to read */
     text-align: left; /* Align the description to the left */
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .generate-action {
@@ -297,7 +297,7 @@
 }
 
 #modal-vote_average {
-    margin: 20px;
+    margin-top: 20px;
 }
 
 /* Close Button */
@@ -315,4 +315,39 @@
 .close-button:focus {
     color: black; /* Change color on hover */
     text-decoration: none;
+}
+
+.like-button, .bookmark-button {
+    width: 25px;  /* Same width as the image */
+    height: 25px; /* Same height as the image */
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent; /* Ensure no background */
+    border: none; /* Ensure no border */
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+button:focus, button:hover {
+    background-color: transparent; /* Ensure no background on hover */
+}
+
+
+.like-button svg,
+.bookmark-button svg {
+    width: 25px;
+    height: 25px;
+    transition: fill 0.2s ease; /* Smooth transition for fill */
+    fill: transparent; /* Default color: transparent */
+}
+
+.like-button:hover svg,
+.bookmark-button:hover svg {
+    fill: black; /* Change color on hover */
 }
