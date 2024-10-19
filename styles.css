@@ -25,11 +25,11 @@
 }
 
 .navbar-left li {
-    margin-right: 30px; /* Add some space between items (adjust as needed) */
+    margin-right: 30px; 
 }
 
 .navbar-right li {
-    margin-left: 30px; /* Add some space between items (adjust as needed) */
+    margin-left: 30px; 
 }
 
 .navbar a {
@@ -46,10 +46,10 @@
 /* Movie List Flexbox Container */
 #movie-list {
     display: flex;
-    flex-wrap: wrap;  /* This allows the movies to wrap onto the next line if needed */
-    justify-content: space-between; /* Align items to the left, or use center if you prefer centered content */
-    gap: 20px;  /* Space between the movie items */
-    padding: 20px; /* Add padding around the movie list container */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px;  
+    padding: 20px; 
 }
 
 /* Styling each movie item */
@@ -58,13 +58,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px; /* Add some space at the bottom */
+    margin-bottom: 20px; 
 }
 
 /* Styling the movie poster */
 #movie-list img {
-    width: 100%; /* Make the image fit the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     border-radius: 10px; 
 }
 
@@ -77,18 +77,18 @@
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; 
+    position: fixed; 
     z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scrolling if needed */
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
-    justify-content: center; /* Horizontally center the modal */
-    align-items: center; /* Vertically center the modal */
-    display: flex; /* Use flexbox to center the modal in the viewport */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
 }
 
 /* Modal Content Layout */
@@ -96,12 +96,12 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 90%; /* Set to 90% of the screen width */
-    max-width: 1200px; /* Optional: Set a maximum width */
+    width: 90%; 
+    max-width: 1200px; 
     box-shadow: 0px 4px 16px rgba(0, 0, 0); /* Adds a shadow for a nice effect */
-    display: flex; /* Use Flexbox to layout the modal content */
-    flex-direction: column; /* Stack title vertically at the top */
-    position: relative; /* Ensure the close button is positioned relative to the modal content */
+    display: flex; 
+    flex-direction: column; 
+    position: relative; 
 }
 
 /* Movie Title Styling */
@@ -110,37 +110,37 @@
     font-weight: bold;
     color: black;
     text-align: center;
-    margin-bottom: 20px; /* Add spacing between title and content */
+    margin-bottom: 20px; 
 }
 
 /* Horizontal Layout for Movie Poster and Description */
 .modal-body {
     display: flex;
-    flex-direction: row; /* Make the poster and description side by side */
-    justify-content: space-between; /* Spread out the content */
-    align-items: flex-start; /* Vertically align content */
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start; 
     width: 100%;
 }
 
 /* Movie Poster Styling */
 #modal-poster {
-    max-width: 40%; /* Adjust width for poster to fit next to description */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 40%;
+    height: auto;
     border-radius: 10px;
 }
 
 /* Movie Description Container */
 #modal-description-container {
-    max-width: 55%; /* Adjust the width for the description container */
-    padding-left: 20px; /* Add some padding between the poster and description */
+    max-width: 55%; 
+    padding-left: 20px; 
 }
 
 /* Movie Description Text */
 #modal-description {
     color: black;
     font-size: 16px;
-    line-height: 1.5; /* Make the description text easier to read */
-    text-align: left; /* Align the description to the left */
+    line-height: 1.5;
+    text-align: left; 
     margin-bottom: 10px;
 }
 
@@ -303,9 +303,9 @@
 /* Close Button */
 .close-button {
     color: #aaa;
-    position: absolute; /* Position it relative to the modal */
-    top: 10px;  /* Position 10px from the top */
-    right: 20px; /* Position 20px from the right */
+    position: absolute; 
+    top: 10px;  
+    right: 20px; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -313,13 +313,13 @@
 
 .close-button:hover,
 .close-button:focus {
-    color: black; /* Change color on hover */
+    color: black; 
     text-decoration: none;
 }
 
 .like-button, .bookmark-button {
-    width: 25px;  /* Same width as the image */
-    height: 25px; /* Same height as the image */
+    width: 25px;  
+    height: 25px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -327,15 +327,15 @@
 }
 
 button {
-    background-color: transparent; /* Ensure no background */
-    border: none; /* Ensure no border */
+    background-color: transparent; 
+    border: none; 
     padding: 0;
     margin: 0;
     cursor: pointer;
 }
 
 button:focus, button:hover {
-    background-color: transparent; /* Ensure no background on hover */
+    background-color: transparent; 
 }
 
 
@@ -343,11 +343,11 @@ button:focus, button:hover {
 .bookmark-button svg {
     width: 25px;
     height: 25px;
-    transition: fill 0.2s ease; /* Smooth transition for fill */
-    fill: transparent; /* Default color: transparent */
+    transition: fill 0.2s ease; 
+    fill: transparent; 
 }
 
 .like-button:hover svg,
 .bookmark-button:hover svg {
-    fill: black; /* Change color on hover */
+    fill: black; 
 }
