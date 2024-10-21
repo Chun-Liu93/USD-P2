@@ -143,8 +143,8 @@ function updatePaginationButtons() {
 function addToBookmarkedMovies(movie) {
     const isBookmarked = bookmarkedMovies.some(m => m.id === movie.id);
     if (!isBookmarked) {
-        addToBookmarkedMovies.push(movie);
-        localStorage.setItem('bookmarkedMovies', JSON.stringify(addToBookmarkedMovies));
+        bookmarkedMovies.push(movie);
+        localStorage.setItem('bookmarkedMovies', JSON.stringify(bookmarkedMovies));
         alert(`${movie.title} has been bookmarked!`);
     } else {
         alert(`${movie.title} is already in your favorites.`);
